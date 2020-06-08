@@ -12,14 +12,14 @@ public class ControllerInvestimento {
     @Autowired
     private ServiceInvestimento serviceInvestimento;
 
+    @GetMapping("/Investimentos")
     public List<Investimento> getAll(){
         return serviceInvestimento.getAll();
     }
 
-
     @GetMapping("/about")
     public String about(){
-        return "Hello World ! Im alive ! Version 0.0.2" ;
+        return "Simulador de Investimentos Pré-Fixado ! Hello World ! Im alive ! Version 0.0.2" ;
     }
 
     @PostMapping("/Investimento")

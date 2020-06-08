@@ -1,11 +1,24 @@
-package com.itau.SpringBootREST.service;
+package com.itau.SpringBootREST.persistence;
+import javax.persistence.*;
 
+@Entity
 public class Investimento {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int Id;
     private int prazo;
     private double valorInicial;
     private double taxa;
     private double valorFinal;
 
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
     public int getPrazo() {
         return prazo;
     }
